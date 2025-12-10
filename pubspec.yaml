@@ -1,0 +1,43 @@
+name: bayburt_yks_takip
+description: Bayburt Anadolu Imam Hatip Lisesi YKS Takip Platformu.
+publish_to: 'none' # Bu satır uygulamanın pub.dev'de yayınlanmasını engeller (özel proje).
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # İkonlar için standart paket
+  cupertino_icons: ^1.0.2
+  
+  # Profil fotoğrafı seçimi için gerekli (Kritik)
+  image_picker: ^1.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  # Kod düzeni kontrolü
+  flutter_lints: ^2.0.0
+  
+  # Uygulama ikonunu değiştirmek için gerekli paket
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  # Resimlerin (Logo vb.) çalışması için bu klasör tanımlı olmalı
+  assets:
+    - assets/
+
+# Uygulama İkonu Ayarları
+# Terminale 'dart run flutter_launcher_icons' yazınca çalışır.
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logo.png"
+  min_sdk_android: 21
